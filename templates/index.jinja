@@ -19,6 +19,7 @@
             <th>Number of Guests</th>
             <th>Room Number</th>
             <th>Description</th>
+            <th>Recurring Event</th>
 
         </tr>
     
@@ -30,6 +31,7 @@
         <td>{{ event.guests}} </td>
         <td>{{ event.room_location }}</td>
         <td>{{ event.description}}</td>
+        <td>{{ event.recurring }}</td>
         </tr>
           
     {% endfor %}
@@ -44,8 +46,11 @@
 <input type="date" name="date" id="date" value="date">
 <br>
 
+<label for="recurring">Is this event recurring?</label>
+<input type="checkbox" name="recurring" id="recurring" value="false">
+
 <label for="guests" name="guests">Number of guests</label>
-<input type="number" name ="guests" id="guests">
+<input type="number" name ="guests" id="guests" min="0">
 <br>
 
 <label for="room_location">Room Location</label>
