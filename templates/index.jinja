@@ -18,6 +18,8 @@
             <th>Date:</th>
             <th>Number of Guests</th>
             <th>Room Number</th>
+            <th>Description</th>
+
         </tr>
     
     {% for event  in events  %}
@@ -25,16 +27,27 @@
     <tr>
         <td><a href="http://127.0.0.1:4999/events/{{event.index}}">{{ event.name }}</a></td>
         <td>{{ event.date }}</td>
-        <td>{{ event.num_of_guests()}} </td>
+        <td>{{ event.guests}} </td>
         <td>{{ event.room_location }}</td>
+        <td>{{ event.description}}</td>
         </tr>
-            
+          
     {% endfor %}
     </table>
 
     <form action="/events" method ="post">
 <label for="name">Name</label>
 <input type="text" name="name" id = "name" placeholder="Enter event name!">
+<br>
+
+<label for="date">Date</label>
+<input type="date" name="date" id="date" value="date">
+<br>
+
+<label for="guests" name="guests">Number of guests</label>
+<input type="number" name ="guests" id="guests">
+<br>
+
 <label for="room_location">Room Location</label>
 <select for="room" name ="room_location" id = "room_location">
 <option disabled selected>Select room location</option>
@@ -43,8 +56,10 @@
 <option name="room" value="3">3</option>
 <option name="room" value="4">4</option>
 </select>
+<br>
 <label for="description">Enter description</label>
 <textarea name="description" id="description" placeholder="Please enter a description"></textarea>
+<br>
 <input type="submit" value="Add Event">
 </form>
 
