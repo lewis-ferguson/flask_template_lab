@@ -36,6 +36,7 @@ h3 {
 
 .table th {
     background-color: #009879;
+    padding: 15px;
 }
 
 .table tr, .table td {
