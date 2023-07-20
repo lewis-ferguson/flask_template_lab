@@ -1,8 +1,8 @@
 from models.event import Event
 from datetime import date
 
-event1 =Event("Music Festival",  1, "Ed-Sheeran Live music", False)
-event2 = Event("Karting", 4, "Petrol Go-karts", True)
+event1 =Event("Music Festival",  1, "Ed-Sheeran Live music", "No")
+event2 = Event("Karting", 4, "Petrol Go-karts", "Yes")
 
 
 events = [event1, event2]

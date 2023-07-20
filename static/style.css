@@ -55,3 +55,8 @@ form {
     display: flex;
     gap: 1px;
 }
+
+.recurring__checkboxes {
+    display: flex;
+    gap: 1rem;
+}
